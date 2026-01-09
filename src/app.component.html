@@ -1,0 +1,168 @@
+<div class="bg-light text-gray-800">
+  <!-- Header -->
+  <header class="absolute top-0 left-0 right-0 z-10 bg-transparent">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white tracking-wider">
+        <span class="text-accent">+</span> Medfinanças
+      </h1>
+      <a href="#cta" class="bg-accent text-primary font-semibold px-6 py-2 rounded-full hover:bg-yellow-400 transition duration-300 hidden sm:block">
+        Fale Conosco
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-primary text-white pt-32 pb-20 text-center">
+      <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://picsum.photos/1600/900?grayscale&blur=2');"></div>
+      <div class="container mx-auto px-6 relative">
+        <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down">
+          Planejamento Financeiro Descomplicado para Médicos
+        </h2>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-300 animate-fade-in-up">
+          Maximize seus ganhos, proteja seu patrimônio e garanta um futuro tranquilo com uma assessoria que entende sua realidade.
+        </p>
+        <a href="#cta" id="cta-hero" class="bg-accent text-primary font-bold text-lg px-10 py-4 rounded-full hover:bg-yellow-400 transition-transform transform hover:scale-105 duration-300 inline-block animate-bounce-slow">
+          Agende uma Consulta Gratuita
+        </a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h3 class="text-3xl font-bold text-primary">Por que a Medfinanças é a escolha certa?</h3>
+          <p class="text-gray-600 mt-2">Focamos no que realmente importa para você.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          @for (service of services(); track service.title) {
+            <div class="bg-light p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 text-center">
+              <div class="flex justify-center mb-4" [innerHTML]="service.icon"></div>
+              <h4 class="text-xl font-semibold text-secondary mb-2">{{ service.title }}</h4>
+              <p class="text-gray-600">{{ service.description }}</p>
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+    
+    <!-- How it Works Section -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-primary">Nossa Metodologia em 3 Passos Simples</h3>
+                <p class="text-gray-600 mt-2">Clareza e objetividade do início ao fim.</p>
+            </div>
+            <div class="relative">
+                 <!-- Dotted line for desktop -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-300 border-t-2 border-dashed"></div>
+
+                <div class="grid md:grid-cols-3 gap-16 relative">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-accent text-primary w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 z-10 shadow-lg">1</div>
+                        <h4 class="text-xl font-semibold text-secondary mb-2">Diagnóstico</h4>
+                        <p class="text-gray-600">Analisamos sua situação financeira atual para entender seus desafios e oportunidades.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-accent text-primary w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 z-10 shadow-lg">2</div>
+                        <h4 class="text-xl font-semibold text-secondary mb-2">Estratégia</h4>
+                        <p class="text-gray-600">Criamos um plano de ação personalizado, alinhado com seus maiores objetivos de vida.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-accent text-primary w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 z-10 shadow-lg">3</div>
+                        <h4 class="text-xl font-semibold text-secondary mb-2">Acompanhamento</h4>
+                        <p class="text-gray-600">Monitoramos seus resultados e ajustamos o plano continuamente para garantir o sucesso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h3 class="text-3xl font-bold text-primary">O que nossos clientes dizem</h3>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="bg-light p-6 rounded-lg shadow-sm">
+            <p class="text-gray-600 italic mb-4">"A Medfinanças transformou minha visão sobre finanças. Agora tenho clareza e segurança para o futuro da minha família."</p>
+            <p class="font-semibold text-secondary">Dra. Ana Silva</p>
+            <p class="text-sm text-gray-500">Cardiologista</p>
+          </div>
+          <div class="bg-light p-6 rounded-lg shadow-sm">
+            <p class="text-gray-600 italic mb-4">"O serviço é impecável e totalmente focado na nossa realidade. Finalmente encontrei uma assessoria que fala a minha língua. Recomendo!"</p>
+            <p class="font-semibold text-secondary">Dr. Carlos Lima</p>
+            <p class="text-sm text-gray-500">Cirurgião Plástico</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-20 bg-secondary text-white text-center">
+      <div class="container mx-auto px-6">
+        <h3 class="text-3xl md:text-4xl font-bold mb-4">Pronto para tomar o controle da sua vida financeira?</h3>
+        <p class="text-lg text-gray-200 max-w-2xl mx-auto mb-8">
+          Dê o primeiro passo em direção à sua tranquilidade financeira. Sua primeira consulta é por nossa conta.
+        </p>
+        <a href="#" class="bg-accent text-primary font-bold text-lg px-10 py-4 rounded-full hover:bg-yellow-400 transition-transform transform hover:scale-105 duration-300 inline-block">
+          Quero Agendar Minha Consulta
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-gray-300 py-6">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2024 Medfinanças. Todos os direitos reservados.</p>
+      <p class="text-sm text-gray-400 mt-1">Planejamento Financeiro para quem cuida de vidas.</p>
+    </div>
+  </footer>
+
+</div>
+<style>
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes bounce-slow {
+    0%, 100% {
+      transform: translateY(-5%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+  .animate-fade-in-down {
+    animation: fade-in-down 0.8s ease-out forwards;
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+  #cta-hero {
+    animation: fade-in-up 0.8s ease-out 0.6s forwards, bounce-slow 2s infinite 1s;
+    opacity: 0;
+  }
+</style>
